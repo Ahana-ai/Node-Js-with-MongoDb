@@ -1,0 +1,63 @@
+<%- include('layouts/header') %>
+
+    <div class="container">
+        <h1 style="margin-left: 30%;">Image Gallery Form</h1>
+
+        <div class="row ">
+            <div class="col-lg-7 mx-auto">
+                <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light">
+
+                        <div class="container">
+                            <form action="/insert" method="post" id="contact-form" role="form"
+                                enctype="multipart/form-data">
+                                <div class="controls">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="form_name">Artist Name *</label>
+                                                <input id="form_name" type="text" name="artistName" class="form-control"
+                                                    placeholder="Please enter the Artist Name *" required="required"
+                                                    data-error="Valid Name is required.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="form_img">Choose Image *</label>
+                                            <input id="form_img" type="file" name="image" class="form-control"
+                                                placeholder="Please enter your image *" required="required"
+                                                data-error="Image is required.">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="form_price">Price *</label>
+                                            <input id="form_price" type="number" name="price" class="form-control"
+                                                placeholder="Please enter the Price *" required="required"
+                                                data-error="Valid Price is required.">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="/view">Image Gallery</a>
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-success btn-send pt-2 btn-block" value="Submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <%- include('layouts/footer') %>

@@ -1,0 +1,34 @@
+<%- include('layouts/header') %>
+
+    <div class="container">
+        <h1 style="margin-left: 30%; margin-top: 5%;">Student List</h1>
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Sl. No.</th>
+                    <th scope="col">Artist Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Images</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% galleryData.map((data, index)=> { %>
+                    <tr>
+                        <td>
+                            <%= ++index %>
+                        </td>
+                        <td>
+                            <%= data.artistName %>
+                        </td>
+                        <td>
+                            <%= data.price %>
+                        </td>
+                        <td>
+                            <img src="/uploads/<%= data.image %>" alt="noImage" width="450px" height="350px">
+                        </td>
+                        <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+    <%- include('layouts/footer') %>

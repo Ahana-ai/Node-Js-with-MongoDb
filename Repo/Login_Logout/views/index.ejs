@@ -1,0 +1,44 @@
+<%- include('layouts/header') %>
+
+<% if(user){ %>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="login-container">
+            <form action="/index" method="post">
+                <button type="submit">
+                    <a href="/logout">
+                        Logout
+                    </a>
+                </button>
+            </form>
+        </div>
+        <h1>
+            <%= message %>
+        </h1>
+    </div>
+
+    <% } else { %>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <div class="login-container">
+                <form action="/index" method="post">
+                    <input type="email" placeholder="Email" name="email">
+                    <input type="password" placeholder="Password" name="password">
+    
+                        <button type="submit">
+                            Login
+                        </button>
+                </form>
+            </div>
+            <h1>
+                <%= message %>
+            </h1>
+        </div>
+        <% } %>
+
+
+    <%- include('layouts/footer') %>

@@ -1,0 +1,87 @@
+<%- include('layouts/header')%>
+
+    <div class="container">
+        <div class="card" style="width: 50rem;">
+            <div class="card-body">
+                <h5 class="card-title">Student Registration Form</h5>
+                <p class="card-text">
+                <div class="row ">
+                    <div class="col-lg-7 mx-auto">
+                        <div class="card mt-2 mx-auto p-4 bg-light">
+                            <div class="card-body bg-light">
+
+                                <div class="container">
+                                    <form action="/insert" method="post" id="contact-form" role="form">
+                                        <div class="controls">
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="form_name">Firstname *</label>
+                                                        <input id="form_name" type="text" name="firstName"
+                                                            class="form-control"
+                                                            placeholder="Please enter your firstname *"
+                                                            required="required" data-error="Firstname is required.">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="form_lastname">Lastname *</label>
+                                                        <input id="form_lastname" type="text" name="lastName"
+                                                            class="form-control"
+                                                            placeholder="Please enter your lastname *"
+                                                            required="required" data-error="Lastname is required.">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="form_gender">Gender *</label>
+                                                        <input type="radio" name="Gender" required data-error="Gender is required."> Male
+                                                        <input type="radio" name="Gender" required data-error="Gender is required."> Female
+                                                        <input type="radio" name="Gender" required data-error="Gender is required."> Others
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                      <label for="form_class">Class *</label>
+                                                      <select id="form_class" name="Class" class="form-control" required="required"
+                                                        data-error="Please specify your Class.">
+                                                        <option value="" selected disabled>--Select Your Class--</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                        <option>Other</option>
+                                                      </select>
+                                                    </div>
+                                                  </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+
+                                                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
+                                                      " value="Send">
+                            
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <%- include('layouts/footer')%>
